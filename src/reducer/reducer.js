@@ -1,5 +1,4 @@
-import {BUY_ITEM, REMOVE_FEATURE} from '../actions/actions'
-
+import { BUY_ITEM, REMOVE_FEATURE } from "../actions/actions";
 
 export const initialState = {
   additionalPrice: 0,
