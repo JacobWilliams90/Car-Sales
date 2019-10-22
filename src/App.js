@@ -23,13 +23,13 @@ const App = props => {
   //   ]
   // };
 
-  const removeFeature = item => {
-    // dispatch an action here to remove an item
-  };
+  // const removeFeature = item => {
+  //   // dispatch an action here to remove an item
+  // };
 
-  const buyItem = item => {
-    // dipsatch an action here to add an item
-  };
+  // const buyItem = item => {
+  //   // dipsatch an action here to add an item
+  // };
 
   return (
     <div className="boxes">
@@ -38,7 +38,7 @@ const App = props => {
         <AddedFeatures car={props.car} />
       </div>
       <div className="box">
-        {/* <AdditionalFeatures store={props.store} /> */}
+        <AdditionalFeatures additionalFeatures={props.additionalFeatures} />
         <Total car={props.car} additionalPrice={props.additionalPrice} />
       </div>
     </div>
@@ -48,7 +48,7 @@ const App = props => {
 function mapStateToProps(state){
   return {
        car: state.car,
-       store: state.store,
+       additionalFeatures: state.additionalFeatures,
        additionalPrice: state.additionalPrice
 }
 }

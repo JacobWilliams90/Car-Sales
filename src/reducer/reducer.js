@@ -25,7 +25,7 @@ export function reducer(state = initialState, action) {
           ...state.car,
           features: [...state.car.features, action.payload]
         },
-        store: state.store.filter(extra => {
+        additionalFeatures: state.additionalFeatures.filter(extra => {
           if (extra.id != action.payload.id) return extra;
         })
       };
@@ -34,8 +34,8 @@ export function reducer(state = initialState, action) {
       return {
         ...state,
         additionalPrice: (state.additionalPrice -= action.payload.price),
-        ...state.store,
-        store: [...state.store, action.payload],
+        ...state.additionalFeatures,
+        additionalFeatures: [...state.additionalFeatures, action.payload],
         car: {
           ...state.car,
           features: state.car.features.filter(extra => {
